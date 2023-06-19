@@ -1,0 +1,15 @@
+<RuleGroup name="" groupRelation="or">
+	<ProcessCreate onmatch="exclude">
+		<Image condition="is">C:\Program Files\Splunk\bin\splunkd.exe</Image>
+		<Image condition="is">C:\Program Files\Splunk\bin\python3.exe</Image> <!--Just splunk noise. Splunk creates processes very quickly. This was the only way to get it to stop spamming my sysmon-->
+		<Image condition="is">C:\Program Files\Splunk\bin\btool.exe</Image>
+		<Image condition="is">C:\Program Files\Splunk\bin\splunk-wmi.exe</Image>
+		<Image condition="is">C:\Program Files\Splunk\bin\splunk-regmon.exe</Image>
+		<Image condition="is">C:\Program Files\Splunk\bin\splunk-powershell.exe</Image>
+		<Image condition="is">C:\Program Files\Splunk\bin\splunk-netmon.exe</Image>
+		<Image condition="is">C:\Program Files\Splunk\bin\splunk-MonitorNoHandle.exe</Image>
+		<Image condition="is">C:\Program Files\Splunk\bin\splunk-admon.exe</Image>
+		<Image condition="is">C:\Program Files\Splunk\bin\splunk-optimize.exe</Image>
+		<CommandLine condition="is">C:\Program Files\Splunk\bin\splunk-admon.exe</CommandLine>
+	</ProcessCreate>
+</RuleGroup>
